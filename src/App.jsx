@@ -4,7 +4,6 @@ import styles from './App.module.css';
 
 const ChordBuilder  = lazy(() => import('./components/ChordBuilder.jsx'));
 const ScaleExplorer = lazy(() => import('./components/ScaleExplorer.jsx'));
-const EarTraining   = lazy(() => import('./components/EarTraining.jsx'));
 const Progressions  = lazy(() => import('./components/Progressions.jsx'));
 const PianoFree     = lazy(() => import('./components/PianoFree.jsx'));
 const Metronome     = lazy(() => import('./components/Metronome.jsx'));
@@ -14,7 +13,6 @@ const TABS = [
   { id: 'piano',       label: 'Piano',       Icon: IconPiano,        description: 'Piano livre' },
   { id: 'acordes',     label: 'Acordes',     Icon: IconChord,        description: 'Formação de acordes' },
   { id: 'escalas',     label: 'Escalas',     Icon: IconScale,        description: 'Explorador de escalas' },
-  { id: 'treino',      label: 'Treino',      Icon: IconEar,          description: 'Treino auditivo' },
   { id: 'progressoes', label: 'Progressões', Icon: IconProgressions, description: 'Progressões harmônicas' },
   { id: 'metronomo',   label: 'Metrônomo',   Icon: IconMetronome,    description: 'Metrônomo interativo' },
   { id: 'teoria',      label: 'Teoria',      Icon: IconTheory,       description: 'Teoria musical' },
@@ -99,7 +97,6 @@ export default function App() {
             {activeTab === 'piano'       && <PianoFree />}
             {activeTab === 'acordes'     && <ChordBuilder />}
             {activeTab === 'escalas'     && <ScaleExplorer />}
-            {activeTab === 'treino'      && <EarTraining />}
             {activeTab === 'progressoes' && <Progressions />}
             {activeTab === 'metronomo'   && <Metronome />}
             {activeTab === 'teoria'      && <Theory />}
@@ -109,8 +106,6 @@ export default function App() {
 
       <footer className={styles.footer}>
         <span>Musical.io — Teoria Musical Interativa</span>
-        <span className={styles.footerSep}>·</span>
-        <span>Tonal.js + Tone.js + React</span>
       </footer>
     </div>
   );

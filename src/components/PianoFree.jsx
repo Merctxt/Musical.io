@@ -78,21 +78,6 @@ export default function PianoFree() {
           ))}
         </div>
       </div>
-
-      <div className={styles.tips}>
-        <div className={styles.tip}>
-          <span className={styles.tipIcon}>💡</span>
-          <div>
-            <strong>Dica:</strong> Vá para a seção <em>Acordes</em> para ver como os acordes são formados sobre o teclado com cores por intervalo.
-          </div>
-        </div>
-        <div className={styles.tip}>
-          <span className={styles.tipIcon}>🎯</span>
-          <div>
-            <strong>Treino:</strong> Use a seção <em>Jogo</em> para testar seu ouvido identificando acordes e escalas.
-          </div>
-        </div>
-      </div>
     </div>
   );
 }
