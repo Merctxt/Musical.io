@@ -1,0 +1,200 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.intro {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.intro p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  flex: 1;
+}
+
+.loadingBadge {
+  font-size: 0.8rem;
+  padding: 4px 10px;
+  background: rgba(245, 158, 11, 0.15);
+  border: 1px solid var(--accent);
+  border-radius: 12px;
+  color: var(--accent);
+  white-space: nowrap;
+}
+
+.pianoSection {
+  background: var(--bg-card);
+  border: 1px solid var(--border-dim);
+  border-radius: var(--radius-lg);
+  padding: 24px 16px 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+.pianoSection::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+}
+
+.infoBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-dim);
+  border-radius: var(--radius);
+  min-height: 52px;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.pressedNotes {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+  flex: 1;
+}
+
+.hint {
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  font-style: italic;
+}
+
+.pressedNote {
+  display: flex;
+  align-items: baseline;
+  gap: 2px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--primary);
+  transition: opacity 0.3s;
+}
+
+.pressedOctave {
+  font-size: 0.7rem;
+  color: var(--text-dim);
+  font-weight: 400;
+}
+
+.clearBtn {
+  padding: 6px 14px;
+  background: transparent;
+  border: 1px solid var(--border-dim);
+  border-radius: var(--radius-sm);
+  color: var(--text-dim);
+  font-size: 0.78rem;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+
+.clearBtn:hover {
+  border-color: var(--danger);
+  color: var(--danger);
+}
+
+.referenceGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.referenceGrid h3 {
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+
+.noteCards {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 6px;
+}
+
+@media (max-width: 600px) {
+  .noteCards { grid-template-columns: repeat(4, 1fr); }
+}
+
+.noteCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  padding: 10px 6px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-dim);
+  border-radius: var(--radius-sm);
+}
+
+.noteCard.noteCardBlack {
+  background: #18181b;
+  border-color: #3f3f46;
+}
+
+.noteCardName {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.noteCardPt {
+  font-size: 0.75rem;
+  color: var(--primary);
+  font-weight: 500;
+}
+
+.noteCardSemitone {
+  font-size: 0.68rem;
+  color: var(--text-dim);
+  font-family: monospace;
+}
+
+.tips {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+@media (max-width: 600px) {
+  .tips { grid-template-columns: 1fr; }
+}
+
+.tip {
+  display: flex;
+  gap: 12px;
+  padding: 14px 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-dim);
+  border-radius: var(--radius);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.tipIcon {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.tip strong {
+  color: var(--text);
+}
+
+.tip em {
+  color: var(--primary);
+  font-style: normal;
+  font-weight: 600;
+}

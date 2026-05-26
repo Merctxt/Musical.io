@@ -1,0 +1,204 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.typeSelector {
+  display: flex;
+  background: var(--bg-hover);
+  border: 1px solid var(--border-dim);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.typeBtn {
+  padding: 8px 20px;
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.15s;
+}
+
+.typeBtn.active {
+  background: var(--accent);
+  color: #09090b;
+  font-weight: 700;
+}
+
+.scoreBar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.score {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--success);
+}
+
+.streak {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--accent);
+  animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+  from { opacity: 0.8; }
+  to { opacity: 1; }
+}
+
+.questionCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border-dim);
+  border-radius: var(--radius-lg);
+  padding: 28px 32px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.questionText {
+  font-size: 1rem;
+  color: var(--text-muted);
+  flex: 1;
+}
+
+.questionNote {
+  font-size: 1.2rem;
+  color: var(--text);
+}
+
+.questionNote strong {
+  color: var(--accent);
+  font-size: 1.4rem;
+}
+
+.playBtn {
+  padding: 12px 32px;
+  background: var(--accent);
+  border: none;
+  border-radius: var(--radius-sm);
+  color: #09090b;
+  font-size: 1rem;
+  font-weight: 700;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+
+.playBtn:hover:not(:disabled) {
+  opacity: 0.88;
+  transform: translateY(-1px);
+}
+
+.playBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pianoSection {
+  background: var(--bg-card);
+  border: 1px solid var(--border-dim);
+  border-radius: var(--radius-lg);
+  padding: 16px;
+}
+
+.optionsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+@media (max-width: 480px) {
+  .optionsGrid { grid-template-columns: 1fr; }
+}
+
+.optionBtn {
+  padding: 16px 20px;
+  background: var(--bg-card);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-align: left;
+  transition: all 0.15s;
+  cursor: pointer;
+  line-height: 1.4;
+}
+
+.optionBtn:hover {
+  background: var(--bg-hover);
+  border-color: var(--accent);
+}
+
+.optionBtn.correct {
+  background: rgba(16, 185, 129, 0.15);
+  border-color: var(--success);
+  color: var(--success);
+  font-weight: 700;
+}
+
+.optionBtn.wrong {
+  background: rgba(239, 68, 68, 0.15);
+  border-color: var(--danger);
+  color: var(--danger);
+}
+
+.optionBtn.showCorrect {
+  background: rgba(16, 185, 129, 0.08);
+  border-color: var(--success);
+  color: var(--success);
+}
+
+.feedbackBanner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  font-weight: 600;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.feedbackCorrect {
+  background: rgba(16, 185, 129, 0.12);
+  border: 1.5px solid var(--success);
+  color: var(--success);
+}
+
+.feedbackWrong {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1.5px solid var(--danger);
+  color: var(--danger);
+}
+
+.nextBtn {
+  padding: 8px 20px;
+  background: var(--bg-hover);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text);
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.15s;
+}
+
+.nextBtn:hover {
+  background: var(--border);
+}

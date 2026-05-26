@@ -1,0 +1,314 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 0 4px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.chordDisplay {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.chordName {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: var(--primary);
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.chordFullName {
+  font-size: 1rem;
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.controlGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.controlGroup label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+
+.noteGrid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 4px;
+}
+
+.noteBtn {
+  padding: 6px 8px;
+  background: var(--bg-hover);
+  border: 1px solid var(--border-dim);
+  border-radius: var(--radius-sm);
+  color: var(--text);
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: all 0.15s;
+  min-width: 36px;
+}
+
+.noteBtn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  background: var(--primary-glow);
+}
+
+.noteBtn.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: white;
+  font-weight: 700;
+}
+
+.octaveBtns {
+  display: flex;
+  gap: 6px;
+}
+
+.octBtn {
+  width: 40px;
+  height: 36px;
+  background: var(--bg-hover);
+  border: 1px solid var(--border-dim);
+  border-radius: var(--radius-sm);
+  color: var(--text);
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.15s;
+}
+
+.octBtn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.octBtn.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: white;
+}
+
+.typeSelector {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.typeCategory {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.categoryLabel {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-dim);
+}
+
+.typeBtns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.typeBtn {
+  padding: 6px 14px;
+  background: var(--bg-hover);
+  border: 1px solid var(--border-dim);
+  border-radius: 20px;
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  font-weight: 500;
+  transition: all 0.15s;
+}
+
+.typeBtn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  background: var(--primary-glow);
+}
+
+.typeBtn.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: white;
+  font-weight: 600;
+}
+
+.pianoSection {
+  background: var(--bg-card);
+  border: 1px solid var(--border-dim);
+  border-radius: var(--radius-lg);
+  padding: 20px 16px 8px;
+}
+
+.playSection {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.playModes {
+  display: flex;
+  background: var(--bg-hover);
+  border: 1px solid var(--border-dim);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.playModeBtn {
+  padding: 8px 20px;
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.15s;
+}
+
+.playModeBtn.active {
+  background: var(--primary);
+  color: white;
+  font-weight: 600;
+}
+
+.playBtn {
+  padding: 10px 32px;
+  background: var(--primary);
+  border: none;
+  border-radius: var(--radius-sm);
+  color: white;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: all 0.15s;
+  box-shadow: 0 4px 12px var(--primary-glow);
+}
+
+.playBtn:hover:not(:disabled) {
+  background: var(--primary-dim);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px var(--primary-glow);
+}
+
+.playBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.explanation {
+  background: var(--bg-card);
+  border: 1px solid var(--border-dim);
+  border-radius: var(--radius-lg);
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.explanation h3 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+
+.formula {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.intervalList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.intervalItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  background: var(--bg-hover);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-dim);
+}
+
+.intervalDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.intervalBadge {
+  font-size: 0.8rem;
+  font-weight: 700;
+  font-family: monospace;
+  min-width: 28px;
+}
+
+.noteName {
+  font-size: 0.95rem;
+  font-weight: 600;
+  min-width: 36px;
+}
+
+.intervalName {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.formulaRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding-top: 8px;
+  border-top: 1px solid var(--border-dim);
+}
+
+.formulaLabel {
+  font-size: 0.8rem;
+  color: var(--text-dim);
+}
+
+.formulaIntervals {
+  font-family: monospace;
+  font-size: 0.85rem;
+  color: var(--secondary);
+  font-weight: 600;
+}
+
+.formulaNote {
+  font-size: 0.78rem;
+  color: var(--text-dim);
+}
